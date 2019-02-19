@@ -1,0 +1,41 @@
+<!-- <div class="post-container">
+    <mat-card class="post-card">
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Enter post title" [(ngModel)]="newPostTitle">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <textarea matInput placeholder="Enter post contents" [(ngModel)]="newPostContent"></textarea>
+        </mat-form-field>
+        <button mat-raised-button (click)="onSubmitPost()">Submit Post</button>
+    </mat-card>
+</div> -->
+
+<!-- Using Form -->
+<div>
+    <mat-card class="post-card">
+        <form (submit)="onSubmitPost(postForm)" #postForm="ngForm" class="post-form-container">
+            <mat-form-field class="example-full-width" id="post-title-input-container">
+                <input matInput 
+                    placeholder="Enter post title" 
+                    name="title" 
+                    ngModel
+                    required
+                    #title="ngModel">
+                <mat-error *ngIf="title.invalid">Please enter a post title</mat-error>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" id="post-content-input-container">
+                <textarea matInput 
+                    placeholder="Enter post contents" 
+                    name="content" 
+                    ngModel
+                    required
+                    #content="ngModel">
+                </textarea>
+                <mat-error *ngIf="content.invalid">Please enter post content</mat-error>
+            </mat-form-field>
+            <button mat-raised-button type="submit" id="post-submit-button" color="primary">Submit Post</button>
+        </form>
+    </mat-card>
+</div>
+
+

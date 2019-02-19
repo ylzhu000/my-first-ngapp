@@ -1,0 +1,14 @@
+<div class="post-list-container">
+  <h2>Your Posts</h2>
+  <mat-accordion *ngIf="posts.length > 0">
+    <mat-expansion-panel *ngFor="let post of posts">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{ post.title }}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>{{ post.content }}</p>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <p *ngIf="posts.length <= 0">No posts yet</p>
+</div>

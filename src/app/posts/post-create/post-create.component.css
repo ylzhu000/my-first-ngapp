@@ -1,0 +1,30 @@
+/* .post-container {
+    width: 100%;
+} */
+
+/* mat-form-field,
+textarea {
+    width: 100%;
+} */
+
+/* #post-title-input-container, #post-content-input-container {
+    padding-left: 10px;
+    padding-bottom: 10px;
+} */
+
+.post-form-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    justify-content: center;
+}
+
+#post-submit-button {
+    margin-top: 30px;
+    width: 20%;
+}
+
+#post-title-input-container {
+    padding-bottom: 20px;
+    padding-top: 15px;
+}
